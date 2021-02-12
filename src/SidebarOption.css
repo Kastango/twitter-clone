@@ -5,7 +5,7 @@
 }
 
 .sidebarOption:hover {
-  background-color: #e8f5fe;
+  background-color:#15181C;
   border-radius: 30px;
   color: var(--twitter-color);
   transition: color 100ms ease-out;
@@ -13,12 +13,18 @@
 
 .sidebarOption > .MuiSvgIcon-root {
   padding: 20px;
+  color: white;
+}
+
+.sidebarOption:hover > .MuiSvgIcon-root {
+  fill: var(--twitter-color);
 }
 
 .sidebarOption > h2 {
   font-weight: 800;
   font-size: 20px;
   margin-right: 20px;
+  color: white;
 }
 
 .sidebarOption--active {

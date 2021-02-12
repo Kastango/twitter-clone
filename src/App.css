@@ -1,6 +1,6 @@
 body {
-  --twitter-color: #50b7f5;
-  --twitter-background: #e6ecf0;
+  --twitter-color: #FFAD1F;
+  --twitter-background: #2F3336;
 }
 
 .app {
@@ -10,4 +10,5 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 10px;
+  background-color: black;
 }

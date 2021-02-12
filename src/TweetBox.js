@@ -11,28 +11,32 @@ function TweetBox() {
     e.preventDefault();
 
     db.collection("posts").add({
-      displayName: "Rafeh Qazi",
-      username: "cleverqazi",
+      displayName: "EDIR",
+      username: "EDIRwebzine",
       verified: true,
       text: tweetMessage,
       image: tweetImage,
       avatar:
-        "https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png",
+        "https://pbs.twimg.com/profile_images/1286441810970259461/OErdn0Kw_400x400.jpg",
     });
 
     setTweetMessage("");
     setTweetImage("");
   };
 
+  const canTweet = () => (
+    tweetMessage.length <= 4
+  )
+
   return (
     <div className="tweetBox">
       <form>
         <div className="tweetBox__input">
-          <Avatar src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png" />
+          <Avatar src="https://pbs.twimg.com/profile_images/1286441810970259461/OErdn0Kw_400x400.jpg" />
           <input
             onChange={(e) => setTweetMessage(e.target.value)}
             value={tweetMessage}
-            placeholder="What's happening?"
+            placeholder="O que está te desocupando?"
             type="text"
           />
         </div>
@@ -40,17 +44,20 @@ function TweetBox() {
           value={tweetImage}
           onChange={(e) => setTweetImage(e.target.value)}
           className="tweetBox__imageInput"
-          placeholder="Optional: Enter image URL"
+          placeholder="Opcional: Coloque o URL da imagem"
           type="text"
         />
-
-        <Button
-          onClick={sendTweet}
-          type="submit"
-          className="tweetBox__tweetButton"
-        >
-          Tweet
-        </Button>
+        <div className="block">
+          <b>{4 - tweetMessage.length}</b>
+          <Button
+            disabled={!canTweet()}
+            onClick={sendTweet}
+            type="submit"
+            className="tweetBox__tweetButton"
+          >
+            EDIR
+          </Button>
+        </div>
       </form>
     </div>
   );

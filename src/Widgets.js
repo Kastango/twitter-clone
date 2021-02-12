@@ -16,19 +16,19 @@ function Widgets() {
       </div>
 
       <div className="widgets__widgetContainer">
-        <h2>What's happening</h2>
+        <h2>EDIR</h2>
 
-        <TwitterTweetEmbed tweetId={"858551177860055040"} />
+        <TwitterTweetEmbed tweetId={"1357324894963462153"} />
 
         <TwitterTimelineEmbed
           sourceType="profile"
-          screenName="cleverqazi"
+          screenName="edirwebzine"
           options={{ height: 400 }}
         />
 
         <TwitterShareButton
-          url={"https://facebook.com/cleverprogrammer"}
-          options={{ text: "#reactjs is awesome", via: "cleverqazi" }}
+          url={""}
+          options={{ text: "edirwebzine é a webzine mais desocupada do momento", via: "EDIRwebzine" }}
         />
       </div>
     </div>
